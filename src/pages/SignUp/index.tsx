@@ -12,7 +12,7 @@ import Button from '../../components/Button'
 
 import { Container, Content, Background } from './styles'
 
-interface Register {
+interface RegisterProps {
   name: string
   email: string
   password: string
@@ -20,7 +20,7 @@ interface Register {
 
 const SignUp: React.FC = () => {
   const formRef = useRef<FormHandles>(null)
-  const handleSubmit = useCallback(async (data: Register) => {
+  const handleSubmit = useCallback(async (data: RegisterProps) => {
     try {
       formRef.current?.setErrors({})
 
